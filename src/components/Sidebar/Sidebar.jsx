@@ -43,7 +43,7 @@ const Sidebar = () => {
                   alt="Message Icon"
                   className="w-5"
                 />
-                <p>{item.slice(0, 18)}...</p>
+                <p>{item.slice(0, 10)}...</p>
               </div>
             ))}
           </div>
