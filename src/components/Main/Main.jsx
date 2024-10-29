@@ -87,8 +87,10 @@ const Main = () => {
   };
 
   return (
-    <div className="flex-1 min-h-screen relative  bg-black text-white">
-      <div className="flex items-center justify-between text-xl p-5 text-gray-600">
+    <div className="flex flex-col w-full justify-between p-10 bg-black text-white">
+      {/* topbar */}
+
+      <div className="flex items-center justify-between text-xl p-2 text-gray-600 ">
         <img src={mainLogo} className="w-28" alt="Main Logo" />
         <img
           src={assets.user_icon}
@@ -97,19 +99,30 @@ const Main = () => {
         />
       </div>
 
-      <div className="max-w-3xl mx-auto">
+      {/* result */}
+
+      <div className="sm:max-w-2xl md:max-w-4xl mx-auto">
         {!showResult ? (
           <>
-            <div className="my-12 text-5xl text-gray-400 font-medium p-5">
+            {/* <div className="sm:my-12 text-xl sm:text-5xl text-gray-400 font-medium p-5">
               <p className="mb-5">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-blue-600 to-red-500">
                   Hello, I'm Pictel
                 </span>
               </p>
               <p>How can I Help You Today..</p>
+            </div> */}
+
+            <div className="sm:my-12 text-xl sm:text-5xl text-gray-400 font-medium p-5">
+              <p className="mb-5">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-blue-500  to-pink-500 bg-[length:400%] animate-wave">
+                  Hello, I'm Pictel
+                </span>
+              </p>
+              <p>How can I Help You Today..</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-5">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4  gap-4 p-5">
               <div
                 className="h-52 p-4 bg-black shadow-sm shadow-gray-600 rounded-lg relative cursor-pointer hover:bg-gray-600"
                 onClick={() => loadPrompt("Briefly Explain Hooks in React Js")}
@@ -196,9 +209,13 @@ const Main = () => {
             </div>
           </div>
         )}
+      </div>
 
-        <div className="absolute bottom-0 w-full max-w-3xl px-5 mx-auto">
-          <div className="flex items-center justify-between gap-5 bg-gray-100 p-3 rounded-full">
+      {/* search */}
+
+      <div>
+        <div className=" w-full sm:max-w-2xl md:max-w-4xl  px-5   mx-auto">
+          <div className="flex items-center justify-between gap-5  bg-gray-100 p-3 rounded-full">
             <input
               type="text"
               placeholder="Enter Prompt here"
@@ -221,9 +238,9 @@ const Main = () => {
               ) : null}
             </div>
           </div>
-          <p className="text-center text-xs mt-4 font-light">
+          <p className="text-center text-xs mt-4 mb-5 font-light">
             Pictel AI may display inaccurate info, including about people, so
-            double-check its responses. Your Privacy and Pictel AI Apps
+            double-check its responses. All rights reserverd @Bhupesh Roushan
           </p>
         </div>
       </div>
